@@ -1,0 +1,25 @@
+.box {
+	width: 90px;
+	height: 90px;;
+	border: 1px solid;
+	
+	font-size: 70px;
+	cursor: pointer;
+}
+
+#boxContainer {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	width: 270px;
+	margin: auto;
+}
+
+#whole {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+
+
+
+
