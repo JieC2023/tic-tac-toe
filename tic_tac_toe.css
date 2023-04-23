@@ -11,6 +11,8 @@
 	grid-template-columns: repeat(3, auto);
 	width: 270px;
 	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 90px;
 }
 
 #whole {

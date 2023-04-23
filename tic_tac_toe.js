@@ -1,61 +1,27 @@
 console.log("Testing testing")
 // ---------------------------------------------
-
 var boxes = document.querySelectorAll(".box")
 
 // test whether 'box9' could be accessed
 console.log(boxes[8]) 
 
-function resetBoard() {
-	boxes[0].textContent = " "
-	boxes[1].textContent = " "
-	boxes[2].textContent = " "
-	boxes[3].textContent = " "
-	boxes[4].textContent = " "
-	boxes[5].textContent = " "
-	boxes[6].textContent = " "
-	boxes[7].textContent = " "
-	boxes[8].textContent = " "
-	// document.querySelector(".reset").setAttribute("hidden", "hidden")
-	boxes[0].style.backgroundColor = "white"
-    boxes[1].style.backgroundColor = "white"
-    boxes[2].style.backgroundColor = "white"
-    boxes[3].style.backgroundColor = "white"
-    boxes[4].style.backgroundColor = "white"
-    boxes[5].style.backgroundColor = "white"
-    boxes[6].style.backgroundColor = "white"
-    boxes[7].style.backgroundColor = "white"
-    boxes[8].style.backgroundColor = "white"
-
-    document.querySelector('.playerOne').textContent ="Player 1 'X'"
-    document.querySelector('.playerOne').style.color="black"
-
-    document.querySelector('.playerTwo').textContent ="Player 2 '0'"
-    document.querySelector('.playerTwo').style.color="black"
-
-    document.querySelector('.drawPlayers').textContent=" "
-	loadGame()
-}
-
 function loadGame() {
-    // var gameState = 0
+    var gameState = 0
 	var clickCount = 0
 
     for (let i = 0; i < boxes.length; i++) {  
 		boxes[i].addEventListener("click", function () {
 
-			if (clickCount % 2 === 0 && boxes[i].textContent === " ") {
+			if (clickCount % 2 === 0 && boxes[i].textContent === " " && gameState === 0) {
 				boxes[i].textContent = "X"
 				clickCount++
-			} else if (boxes[i].textContent === " ") {
+			} else if (boxes[i].textContent === " " && gameState === 0) {
 				boxes[i].textContent = "O"
 				clickCount++
 			}
-
-			// && gameState === 0
-			// && gameState === 0
+			
 			function playRound (position1, position2, position3) {
-				// gameState = 1
+				gameState = 1
 				console.log("Congrats! Player " + document.querySelector(position1).textContent + " wins!")
 
 				document.querySelector(position1).style.backgroundColor = "green"
@@ -117,7 +83,7 @@ function loadGame() {
 
             // when it is a tied game:
         	}  else if (boxes[0].textContent !== " " && boxes[1].textContent !== " " && boxes[2].textContent !== " " && boxes[3].textContent !== " " && boxes[4].textContent !== " " && boxes[5].textContent !== " " && boxes[6].textContent !== " " && boxes[7].textContent !== " " && boxes[8].textContent !== " ") {
-				// gameState = 1
+				gameState = 1
 
 				// message displayed in the console, when it's a draw game.
 				console.log("It's a draw! No one wins.")
@@ -134,7 +100,38 @@ function loadGame() {
 	}
 }
 
+function resetBoard() {
+	boxes[0].textContent = " "
+	boxes[1].textContent = " "
+	boxes[2].textContent = " "
+	boxes[3].textContent = " "
+	boxes[4].textContent = " "
+	boxes[5].textContent = " "
+	boxes[6].textContent = " "
+	boxes[7].textContent = " "
+	boxes[8].textContent = " "
 
+	document.querySelector(".reset").setAttribute("hidden", "hidden")
+
+	boxes[0].style.backgroundColor = "white"
+    boxes[1].style.backgroundColor = "white"
+    boxes[2].style.backgroundColor = "white"
+    boxes[3].style.backgroundColor = "white"
+    boxes[4].style.backgroundColor = "white"
+    boxes[5].style.backgroundColor = "white"
+    boxes[6].style.backgroundColor = "white"
+    boxes[7].style.backgroundColor = "white"
+    boxes[8].style.backgroundColor = "white"
+
+    document.querySelector('.playerOne').textContent ="Player 1 'X'"
+    document.querySelector('.playerOne').style.color="black"
+
+    document.querySelector('.playerTwo').textContent ="Player 2 '0'"
+    document.querySelector('.playerTwo').style.color="black"
+
+    document.querySelector('.msg-when-draw').textContent=" "
+	loadGame()
+}
 
 
 
