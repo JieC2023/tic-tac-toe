@@ -21,7 +21,7 @@ My first individual project: Tic-Tac-Toe
 - Check for win conditions, messages to the players
 - reset function
 - test each function during the coding process
-![drawing a engineering flow chart]([https://1drv.ms/i/s!AhrJPjitA9SHiRQ31QnkZ0OJfbzs?e=qexONd](https://imgur.com/a/aPsVobb))
+![drawing a engineering flow chart](https://imgur.com/qQ5baAc)
 
 ## :rocket: Tech 
 - HTML
