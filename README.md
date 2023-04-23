@@ -12,6 +12,7 @@ My first individual project: Tic-Tac-Toe
 5. If all cells are filled without any player getting three in a row, this is a draw;
 ```
 - Tic toac toe is a fun and easy game to play with your friends and family.
+
 ## :pencil2: Planning & Problem Solving
 - Break down the steps into small pieces
 - Create a basic HTML file with 3 x 3 grid
@@ -20,17 +21,17 @@ My first individual project: Tic-Tac-Toe
 - Check for win conditions, messages to the players
 - reset function
 - test each function during the coding process
-![drawing a engineering flow chart](https://1drv.ms/i/s!AhrJPjitA9SHiRQ31QnkZ0OJfbzs?e=qexONd)
+![drawing a engineering flow chart]([https://1drv.ms/i/s!AhrJPjitA9SHiRQ31QnkZ0OJfbzs?e=qexONd](https://imgur.com/a/aPsVobb))
+
 ## :rocket: Tech 
 - HTML
 - CSS
 - JavaScript
 - Javascript for DOM manipulation
+
 ## :scream: Bugs to fix :poop:
-- Get the "X" and "O" to show on the grid
-- Take turns to place symbols ("X" or "O")
-- deliver the right messages accordingly
-- Get the game to restart after playing one round
+- After resetting the game, the style should be consistent.
+
 ## :sob: Lesson learnt
 - Starting early would allow more time to plan, execute and refine the work.
 - Commit and push more often so a copy of the work at the current stage is saved
