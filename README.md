@@ -20,7 +20,7 @@ My first individual project: Tic-Tac-Toe
 - Check for win conditions, messages to the players
 - reset function
 - test each function during the coding process
-![drawing a engineering flow chart](url here)
+![drawing a engineering flow chart](https://1drv.ms/i/s!AhrJPjitA9SHiRQ31QnkZ0OJfbzs?e=qexONd)
 ## :rocket: Tech 
 - HTML
 - CSS
@@ -29,12 +29,13 @@ My first individual project: Tic-Tac-Toe
 ## :scream: Bugs to fix :poop:
 - Get the "X" and "O" to show on the grid
 - Take turns to place symbols ("X" or "O")
+- deliver the right messages accordingly
 - Get the game to restart after playing one round
 ## :sob: Lesson learnt
-- Starting early would give me more time to plan, execute and refine my work.
+- Starting early would allow more time to plan, execute and refine the work.
 - Commit and push more often so a copy of the work at the current stage is saved
-- Ask questions sooner than later when stuck 
-- Create a functional product first and then make improvements to it over time, rather than trying to make it perfect from the outset. 
+- Ask questions sooner better than later
+- Create a functional product first and then make improvements over time, rather than trying to make it perfect from the outset. 
 
 ## :white_check_mark: Future features
 - Get creative with the styling - research CSS effects, animations to make the game more interesting

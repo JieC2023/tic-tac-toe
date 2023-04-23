@@ -9,7 +9,8 @@ function loadGame() {
     var gameState = 0
 	var clickCount = 0
 
-    for (let i = 0; i < boxes.length; i++) {  
+    for (let i = 0; i < boxes.length; i++) { 
+		// add event listener for every box on a click
 		boxes[i].addEventListener("click", function () {
 
 			if (clickCount % 2 === 0 && boxes[i].textContent === " " && gameState === 0) {
@@ -20,6 +21,7 @@ function loadGame() {
 				clickCount++
 			}
 			
+			// the playRound() takes 3 arguments (3 boxes in a row with the same symbol, either "X" or "O")
 			function playRound (position1, position2, position3) {
 				gameState = 1
 				console.log("Congrats! Player " + document.querySelector(position1).textContent + " wins!")
@@ -36,19 +38,24 @@ function loadGame() {
 					document.querySelector('.playerOne').textContent ="Congratulations! Player 'X' wins!"
 					document.querySelector('.playerTwo').style.color="red"
 					document.querySelector('.playerTwo').textContent ="Sorry, player 'O' you lost. Better luck next time!"
+					document.querySelector('.playerOne').style.fontSize = "25px"
+					document.querySelector('.playerTwo').style.fontSize = "25px"
 				} else {
 					document.querySelector('.playerOne').style.color="red"
 					document.querySelector('.playerOne').textContent ="Sorry, player 'X' you lost this time."
 					document.querySelector('.playerTwo').style.color="green"
 					document.querySelector('.playerTwo').textContent ="Good job! Player 'O' you win!"
+					document.querySelector('.playerOne').style.fontSize = "25px"
+					document.querySelector('.playerTwo').style.fontSize = "25px"
 				} 
-				document.querySelector(".reset").removeAttribute("hidden")
-				
+				// when there was a winner, the button would be visible on the webpage.
+				document.querySelector(".reset").removeAttribute("hidden")				
 			}
 
-			console.log(boxes[0].textContent)
+			// test to see what box1's content is
+			console.log(boxes[0].textContent) 
 
-			// 8 winning combinations:
+			// 8 winning combinations (3 boxes in a row with the same symbol):
 			if (document.querySelector("#box1").textContent !== " " && document.querySelector("#box1").textContent === document.querySelector("#box2").textContent && document.querySelector("#box3").textContent === document.querySelector("#box1").textContent) {
 				playRound("#box1", "#box2", "#box3")
             	// it takes box1, box2 and box3 to win the game.
@@ -81,7 +88,7 @@ function loadGame() {
             	playRound("#box3", "#box5", "#box7")
             	// it takes box3, box5 and box7 to win the game.
 
-            // when it is a tied game:
+            // when it is a tied game (all 9 boxes were occupied without getting three in a row):
         	}  else if (boxes[0].textContent !== " " && boxes[1].textContent !== " " && boxes[2].textContent !== " " && boxes[3].textContent !== " " && boxes[4].textContent !== " " && boxes[5].textContent !== " " && boxes[6].textContent !== " " && boxes[7].textContent !== " " && boxes[8].textContent !== " ") {
 				gameState = 1
 
@@ -89,13 +96,13 @@ function loadGame() {
 				console.log("It's a draw! No one wins.")
 				
 				// The message displayed on the page if it is a draw.
-        		document.querySelector('.drawPlayers').textContent = "The game is tied. Try again!"
-				document.querySelector('.drawPlayers').style.color = "orange"
-        		// document.querySelector('.container').style.backgroundColor = "orange"
+        		document.querySelector('.msg-when-draw').textContent = "The game is tied. Try again!"
+				document.querySelector('.msg-when-draw').style.color = "orange"
+				document.querySelector('.msg-when-draw').style.fontSize = "25px"
+
+				// If the game was tied, the reset button would be visible on the webpage.
         		document.querySelector(".reset").removeAttribute("hidden")
 			}
-
-
 		})
 	}
 }
@@ -111,8 +118,10 @@ function resetBoard() {
 	boxes[7].textContent = " "
 	boxes[8].textContent = " "
 
+	// When the game was reset, the button would be hidden.
 	document.querySelector(".reset").setAttribute("hidden", "hidden")
 
+	// clear the background color from the previous round
 	boxes[0].style.backgroundColor = "white"
     boxes[1].style.backgroundColor = "white"
     boxes[2].style.backgroundColor = "white"
@@ -123,20 +132,20 @@ function resetBoard() {
     boxes[7].style.backgroundColor = "white"
     boxes[8].style.backgroundColor = "white"
 
-    document.querySelector('.playerOne').textContent ="Player 1 'X'"
-    document.querySelector('.playerOne').style.color="black"
+	// when reset, the messages from last round were cleared. Only "Player 1 'X'" and "Player 2 '0'" were displayed.
+	// when reset, the font color of two players was set back to default color
+    document.querySelector('.playerOne').textContent = "Player 1 'X'"
+    document.querySelector('.playerOne').style.color= "black"
+	document.querySelector('.playerOne').style.fontSize = "25px"
 
-    document.querySelector('.playerTwo').textContent ="Player 2 '0'"
-    document.querySelector('.playerTwo').style.color="black"
+    document.querySelector('.playerTwo').textContent = "Player 2 '0'"
+    document.querySelector('.playerTwo').style.color= "black"
+	document.querySelector('.playerTwo').style.fontSize = "25px"
 
+	// clear the draw game message
     document.querySelector('.msg-when-draw').textContent=" "
+
+	// when everything was reset, the game was loaded again
 	loadGame()
 }
-
-
-
-
-
-
-
 
