@@ -1,43 +1,37 @@
 # tic-tac-toe
 My first individual project: Tic-Tac-Toe
 ## :computer: [Click here](https://jiec2023.github.io/tic-tac-toe/) to see my live project!
+
 ## :page_facing_up: About
-- How to play tic-tac-toe.
-- Tic-tac-toe is a two-player game played on a 3 x 3 grid. Here are the steps:
+- This project is a simple Tic-Tac-Toe game built with HTML, CSS and JavaScript. The game allows two players to take turns placing symbols on a 3 X 3 grid, with the goal of getting three in a row.
+- Features:
 ```
-1. One player would be "X" and the other player would then be "O";
-2. The player with "X" goes first by placing an "X" in any empty cell on the grid;
-3. The player with "O" goes next by placing an "O" in any empty cell on the grid;
-4. Two players take turns to place their own symbol on the grid til one player gets three in a row (either in horizontal, vertical, or diagonal direction);
-5. If all cells are filled without any player getting three in a row, this is a draw;
+1. Two players can play the game against each other on the same device.
+2. Different messages will be diaplayed for the players
+3. When getting three in a row, the color of the cells in a row will change.
+4. Players can restart the game after each round.
 ```
-- Tic toac toe is a fun and easy game to play with your friends and family.
+- The motivation behind this project was to improve my skills in front-end web development. I wanted to challenge myself by building a game using HTML, CSS and JavaScript. I also enjoy playing Tic-Tac_Toe. It was a fun project to work on.
 
 ## :pencil2: Planning & Problem Solving
-- Break down the steps into small pieces
-- Create a basic HTML file with 3 x 3 grid
-- Style the basic game board
-- Work on game logic (JavaScript), keep track of game state, winning combos, use event listeners to detect when clicks happen, update the game state accordingly
-- Check for win conditions, messages to the players
-- reset function
-- test each function during the coding process
+- To plan this project, I first wrote down some key points of the development process. I wanted to keep the design simple and intuitive, so I opted for a minimalist layout.
 
 ![drawing a engineering flow chart](https://i.imgur.com/qQ5baAc.jpeg)
+
+- Throughout the development process, I used a combination of debugging techniques and online research to solve problems and overcome challenges. Whenever I encountered an issue, I first tried to identify the root cause and isolate the problem. From there, I would search online for solutions and try out different approaches until I found one that worked.
 
 ## :rocket: Tech 
 - HTML
 - CSS
-- JavaScript
-- Javascript for DOM manipulation
+- JavaScript (DOM manipulation)
 
 ## :scream: Bugs to fix :poop:
 - After resetting the game, the style should be consistent.
 
 ## :sob: Lesson learnt
-- Starting early would allow more time to plan, execute and refine the work.
-- Commit and push more often so a copy of the work at the current stage is saved
-- Ask questions sooner better than later
-- Create a functional product first and then make improvements over time, rather than trying to make it perfect from the outset. 
+- Overall, this project taught me a lot about the development process and helped me refine my problem-solving skills. I learned the importance of planning and defining clear goals before beginning a project, and I discovered new techniques and strategies for overcoming challenges along the way.
 
 ## :white_check_mark: Future features
-- Get creative with the styling - research CSS effects, animations to make the game more interesting
+- A better user interface with more visual feedback
+- The ability to keeps track of each player's score
+- The ability to play against the computer
