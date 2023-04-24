@@ -148,4 +148,3 @@ function resetBoard() {
 	// when everything was reset, the game was loaded again
 	loadGame()
 }
-
