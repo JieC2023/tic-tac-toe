@@ -13,9 +13,12 @@ My first individual project: Tic-Tac-Toe
 ```
 - The motivation behind this project was to improve my skills in front-end web development. I wanted to challenge myself by building a game using HTML, CSS and JavaScript. I also enjoy playing Tic-Tac_Toe. It was a fun project to work on.
 
-![drawing a engineering flow chart](draw.png)
-![drawing a engineering flow chart](playerX.png)
-![drawing a engineering flow chart](playerO.png)
+- draw
+![draw game](draw.png)
+- player X wins
+![X wins](playerX.png)
+- player O wins
+![O wins](playerO.png)
 
 ## :pencil2: Planning & Problem Solving
 - To plan this project, I first wrote down some key points of the development process. I wanted to keep the design simple and intuitive, so I opted for a minimalist layout.
